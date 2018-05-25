@@ -12,8 +12,24 @@ struct   cus {
 	int waitFloor;
 	int toFloor;
 }cus[1000];
-int main()
+int main(int argc,char *argv[])
 {
+	FILE *output1, *output2, *output3, *input1;
+	ofstream outfile1("output1.txt");
+	ofstream outfile2("output2.txt");
+	ofstream outfile3("output3.txt");
+	ifstream  infile("input1.txt");
+	if (argc == 3)
+	{
+		infile = ifstream(argv[1]);
+	}
+	if (argc == 5)
+	{
+		infile = ifstream(argv[1]);
+		outfile1 = ofstream(argv[2]);
+		outfile2 = ofstream(argv[3]);
+		outfile3 = ofstream(argv[4]);
+	}
 	even    evenelevator;
 	odd     oddelevator;
 	normal   normalelevator;
