@@ -14,11 +14,11 @@ struct   cus {
 }cus[1000];
 int main(int argc,char *argv[])
 {
-	FILE *output1, *output2, *output3, *input1;
+	FILE *output1, *output2, *output3, *input;
 	ofstream outfile1("output1.txt");
 	ofstream outfile2("output2.txt");
 	ofstream outfile3("output3.txt");
-	ifstream  infile("input1.txt");
+	ifstream  infile("input.txt");
 	if (argc == 3)
 	{
 		infile = ifstream(argv[1]);
